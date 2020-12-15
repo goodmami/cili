@@ -21,8 +21,7 @@ jobs:
         xz -z cili.tsv
     - name: Upload
       run: |
-        tag_name="${GITHUB_REF##*/}"
-        gh release upload "${GITHUB_REF##*/}" cili.tsv.xz#CILI inventory and definitions
+        gh release upload "${GITHUB_REF##*/}" "cili.tsv.xz#CILI inventory and definitions"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
